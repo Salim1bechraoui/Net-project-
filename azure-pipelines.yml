@@ -6,7 +6,7 @@ pr:
  branches:
    include:
      - dev
-     - master
+     - main
    exclude:
      - test
  paths:
@@ -17,7 +17,7 @@ pr:
 trigger: 
  branches:
    include:
-     - master
+     - main
  paths:
    exclude:
      - docs/*
