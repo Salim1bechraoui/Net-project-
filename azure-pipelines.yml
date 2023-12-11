@@ -2,8 +2,30 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+pr:
+ branches:
+   include:
+     - dev
+     - master
+   exclude:
+     - test
+ paths:
+  exclude:
+    - docs/*
+    - README.md
 
-trigger: 'none'
+trigger: 
+ branches:
+   include:
+     - master
+ paths:
+   exclude:
+     - docs/*
+     - README.md
+     - azure-pipelines.yaml
+ 
+
+
 pool:
   vmImage: 'windows-2019'
 variables:
